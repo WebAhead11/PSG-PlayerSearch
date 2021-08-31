@@ -68,4 +68,6 @@ body {
 }
 
 .other {
+  display: flex;
+  flex-direction: column;
 }

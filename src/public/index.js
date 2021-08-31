@@ -10,6 +10,8 @@ fetch("http://localhost:3000/data")
     document.getElementById("players").innerHTML = options;
     // .then((Array)=>{
     //here will be the display to the user (html) in dev with id "dataPreview"
+    const playerToSearch = document.getElementById("playerName").value;
+
     if (playerToSearch != "") {
       let PlayerCardHtml = "";
       if (Array[0]["Id"] >= 100) {
@@ -97,55 +99,57 @@ document.querySelector("form").addEventListener("submit", (event) => {
     .then((response) => {
       return response.json();
     })
-    .then((Array) => {
+    .then((arr2) => {
       //here will be the display to the user (html) in dev with id "dataPreview"
       if (playerToSearch != "") {
         let PlayerCardHtml = "<div class='shrtNum_plyrName'>";
-        if (Array[0]["Id"] >= 100) {
+        if (arr2[0]["Id"] >= 100) {
           PlayerCardHtml += "<div class='shirtNumber'>Not choosen yet</div>";
         } else {
           PlayerCardHtml +=
-            "<div class='shirtNumber'>" + Array[0]["Id"] + "</div>";
+            "<div class='shirtNumber'>" + arr2[0]["Id"] + "</div>";
         }
 
+        console.log(1)
+
         PlayerCardHtml +=
-          "<div class='playerName'>" + Array[0]["Name"] + "</div>";
+          "<div class='playerName'>" + arr2[0]["Name"] + "</div>";
         PlayerCardHtml += "</div>";
         PlayerCardHtml += "<div class='playerCard'>";
-        //PlayerCardHtml += "<div><img src='./public/IMG/"+Array[0]['Id']+".png'></div>"
+        //PlayerCardHtml += "<div><img src='./public/IMG/"+arr2[0]['Id']+".png'></div>"
         let styleC =
-          "background-image: url(./public/IMG/" + Array[0]["Id"] + ".png);";
+          "background-image: url(./public/IMG/" + arr2[0]["Id"] + ".png);";
         PlayerCardHtml +=
           "<div class='Img_other' style='" +
           styleC +
           " background-repeat: no-repeat;'>";
         PlayerCardHtml +=
-          "<div class='other'>Birthdate : " + Array[0]["Birthdate"] + " </div>";
+          "<div class='other'>Birthdate : " + arr2[0]["Birthdate"] + " </div>";
         PlayerCardHtml +=
           "<div class='other'>Nationality : " +
-          Array[0]["Nationality"] +
+          arr2[0]["Nationality"] +
           " </div>";
         PlayerCardHtml +=
-          "<div class='other'>Profile : " + Array[0]["Profile"] + " </div>";
+          "<div class='other'>Profile : " + arr2[0]["Profile"] + " </div>";
         PlayerCardHtml +=
           "<div class='other'>Signed_at_PSG : " +
-          Array[0]["Signed_at_PSG"] +
+          arr2[0]["Signed_at_PSG"] +
           " </div>";
         PlayerCardHtml +=
-          "<div class='other'>Position : " + Array[0]["Position"] + " </div>";
-        if (Array[0]["Games_played"] > -1) {
+          "<div class='other'>Position : " + arr2[0]["Position"] + " </div>";
+        if (arr2[0]["Games_played"] > -1) {
           PlayerCardHtml +=
             "<div class='other'>Games_played : " +
-            Array[0]["Games_played"] +
+            arr2[0]["Games_played"] +
             " </div>";
         } else {
           PlayerCardHtml +=
             "<div class='other'>Games_played : No Data To Preview </div>";
         }
-        if (Array[0]["Minutes_played"] > -1) {
+        if (arr2[0]["Minutes_played"] > -1) {
           PlayerCardHtml +=
             "<div class='other'>Minutes_played : " +
-            Array[0]["Minutes_played"] +
+            arr2[0]["Minutes_played"] +
             " </div>";
         } else {
           PlayerCardHtml +=
@@ -155,38 +159,40 @@ document.querySelector("form").addEventListener("submit", (event) => {
         PlayerCardHtml +=
           "<div class='other'>PREVIOUS_CLUBS : " +
           " </div>";
-          
-          let arr =JSON.stringify(Array[0]["PREVIOUS_CLUBS"]);
-          let arr2 = arr.split(",");
-          
-          for(let d=0;d<arr2.length;d++){
-            arr2[d]= arr2[d].replaceAll('"',"");
-            arr2[d] = arr2[d].replaceAll("[","");
-            arr2[d] = arr2[d].replaceAll("]","");
-            arr2[d] = arr2[d].replaceAll("{","");
-            arr2[d] = arr2[d].replaceAll("}","");
-            arr2[d] = arr2[d].replaceAll(":"," : ");
-            PlayerCardHtml +=
-          "<div class='other'> " +arr2[d]+
-          " </div>";
-          }
-      
-        if (Array[0]["Website"] != "") {
+
+        console.log('AZIZ', arr2[0]["PREVIOUS_CLUBS"][0]['Santos FC'])
+        let arr = arr2[0]["PREVIOUS_CLUBS"];
+
+        PlayerCardHtml +=
+          "<div class='other'>";
+
+        [{ 'santos Fc': '2013' }]
+
+        // Object.keys(obj) ['santos Fc']
+
+        arr.forEach((obj) => {
+          const key = Object.keys(obj)[0]
+          PlayerCardHtml += `<span>${key} ${obj[key]} </span>`
+        });
+
+        PlayerCardHtml += "</div>"
+
+        if (arr2[0]["Website"] != "") {
           PlayerCardHtml +=
             "<div class='other'>Website : <a href='" +
-            Array[0]["Website"] +
+            arr2[0]["Website"] +
             "' target='_blank'>" +
-            Array[0]["Name"] +
+            arr2[0]["Name"] +
             "</a></a></div>";
         } else {
           PlayerCardHtml += "<div class='other'>Website : No data</div>";
         }
-        if (Array[0]["Facebook"] != "") {
+        if (arr2[0]["Facebook"] != "") {
           PlayerCardHtml +=
             "<div class='other'>Facebook : <a href='" +
-            Array[0]["Facebook"] +
+            arr2[0]["Facebook"] +
             "' target='_blank'>" +
-            Array[0]["Name"] +
+            arr2[0]["Name"] +
             "</a></a></div>";
         } else {
           PlayerCardHtml += "<div class='other'>Facebook: No data</div>";
