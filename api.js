@@ -1,3 +1,12 @@
+/*
+Important:
+if Id>=100 that mean this player don"t have number for his shirt yet
+if Games_played===-1 that mean no data at pares website
+if Minutes_played===-1 that mean no data at pares website
+other fiedls that empty string because no data at pares website
+*/
+
+
 const players_list = [
     {
         Id: 30, //same as shirt number
@@ -9,7 +18,7 @@ const players_list = [
         Position :"Forward",
         Games_played: 1,
         Minutes_played: 24,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
+        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021"}],
         Website: "https://messi.com",
         Facebook: "https://www.facebook.com/leomessi"
     },
@@ -65,7 +74,7 @@ const players_list = [
         Position :"Goal Keeper",
         Games_played: 0,
         Minutes_played: 0,
-        PREVIOUS_CLUBS: [{"AC Milan":"2015-2021",}],
+        PREVIOUS_CLUBS: [{"AC Milan":"2015-2021"}],
         Website: "",
         Facebook: ""
     },
@@ -77,8 +86,8 @@ const players_list = [
         Profile: "",
         Signed_at_PSG :"",
         Position :"Goal Keeper",
-        Games_played: ,
-        Minutes_played: ,
+        Games_played: -1,
+        Minutes_played: -1,
         PREVIOUS_CLUBS: [{}],
         Website: "",
         Facebook: ""
@@ -191,7 +200,7 @@ const players_list = [
         Position :"Defender",
         Games_played: 0,
         Minutes_played: 0,
-        PREVIOUS_CLUBS: [{"AS Monaco":"2010-2015",}],
+        PREVIOUS_CLUBS: [{"AS Monaco":"2010-2015"}],
         Website: "",
         Facebook: ""
     },
@@ -219,7 +228,7 @@ const players_list = [
         Position :"Defender",
         Games_played: 4,
         Minutes_played: 360,
-        PREVIOUS_CLUBS: [{"FC Schalke 04":"2016-2018",}],
+        PREVIOUS_CLUBS: [{"FC Schalke 04":"2016-2018"}],
         Website: "",
         Facebook: ""
     },
@@ -247,7 +256,7 @@ const players_list = [
         Position :"Midfielder",
         Games_played: 2,
         Minutes_played: 147,
-        PREVIOUS_CLUBS: [{"Delfino Pescara 1936":"2008-2012",}],
+        PREVIOUS_CLUBS: [{"Delfino Pescara 1936":"2008-2012"}],
         Website: "",
         Facebook: ""
     },
@@ -266,213 +275,199 @@ const players_list = [
         Facebook: ""
     },
     {
-        Id: 10, //same as shirt number
+        Id: 11, //same as shirt number
+        Name: "Angel Di María",
+        Birthdate: "February 14th 1988, Rosario",
+        Nationality:"Argentinian",
+        Profile: "180cm / 75kg",
+        Signed_at_PSG :"August 6th 2015",
+        Position :"Midfielder",
+        Games_played: 2,
+        Minutes_played: 90,
+        PREVIOUS_CLUBS: [{"Rosario Central":"2005-2007","SL Benfica":"2007-2010","Real Madrid":"2010-2014","Manchester United FC":"2014-2015"}],
+        Website: "",
+        Facebook: "https://www.facebook.com/AngelDiMariaJM/"
+    },
+    {
+        Id: 12, //same as shirt number
+        Name: "Rafinha",
+        Birthdate: "February 12th 1992, São Paulo (Brazil)",
+        Nationality:"Brazilian",
+        Profile: "174 cm / 71 kg",
+        Signed_at_PSG :"October 5th 2020",
+        Position :"Midfielder",
+        Games_played: 1,
+        Minutes_played: 2,
+        PREVIOUS_CLUBS: [{"FC Barcelona":"2011-2020","Celta Vigo":"2013-2014","Inter Milan":"2017-2018","Celta Vigo":"2019-2020"}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 15, //same as shirt number
+        Name: "Danilo Pereira",
+        Birthdate: "September 9th 1991, Bissau (Guinea-Bissau)",
+        Nationality:"Guinea-Bissau",
+        Profile: "188 cm / 83 kg",
+        Signed_at_PSG :"October 5th 2020",
+        Position :"Midfielder",
+        Games_played: 2,
+        Minutes_played: 120,
+        PREVIOUS_CLUBS: [{"Aris Thessaloniki FC":"2010-2011","Parma Calcio 1913":"2011-2012","SV Roda JC Kerkrade":"2012-2013","CS Maritimo":"2013-2015","FC Porto":"2015-2020"}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 18, //same as shirt number
+        Name: "Georginio Wijnaldum",
+        Birthdate: "November 11th 1990, Rotterdam (Netherlands)",
+        Nationality:"Dutch",
+        Profile: "175 cm / 74 kg",
+        Signed_at_PSG :"June 10th 2021",
+        Position :"Midfielder",
+        Games_played: 4,
+        Minutes_played: 334,
+        PREVIOUS_CLUBS: [{"Feyenoord Rotterdam":"2006-2011","PSV Eindhoven":"2011-2015","Newcastle United":"2015-2016","Liverpool FC":"2016-2021"}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 19, //same as shirt number
+        Name: "Pablo Sarabia",
+        Birthdate: "May 11th 1992, Madrid",
+        Nationality:"Spanish",
+        Profile: "174 cm / 70kg",
+        Signed_at_PSG :"July 1st 2019",
+        Position :"Midfielder",
+        Games_played: 2,
+        Minutes_played: 21,
+        PREVIOUS_CLUBS: [{"Real Madrid":"2010-2011","Getafe CF":"2011-2016","Sevilla FC":"2016-2019"}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 21, //same as shirt number
+        Name: "Ander Herrera",
+        Birthdate: "August 14th 1989, Bilbao",
+        Nationality:"Spanish",
+        Profile: "182 cm / 71 kg",
+        Signed_at_PSG :"July 4th 2019",
+        Position :"Midfielder",
+        Games_played: 4,
+        Minutes_played: 294,
+        PREVIOUS_CLUBS: [{"Real Zaragoza":"2008-2011","Athletic Bilbao":"2011-2014","Manchester United FC":"2014-2019"}],
+        Website: "",
+        Facebook: "https://www.facebook.com/anderherrera/"
+    },
+    {
+        Id: 23, //same as shirt number
+        Name: "Julian Draxler",
+        Birthdate: "September 20th 1993, Gladbeck",
+        Nationality:"German",
+        Profile: "185cm / 72kg",
+        Signed_at_PSG :"January 3rd 2017",
+        Position :"Midfielder",
+        Games_played: 4,
+        Minutes_played: 173,
+        PREVIOUS_CLUBS: [{"FC Schalke 04":"2010-2015","VfL Wolfsbourg":"2015-2017"}],
+        Website: "",
+        Facebook: "https://www.facebook.com/juliandraxler/"
+    },
+    {
+        Id: 27, //same as shirt number
+        Name: "Idrissa Gueye",
+        Birthdate: "September 26th 1989, Dakar",
+        Nationality:"Senegal",
+        Profile: "174 cm / 66kg",
+        Signed_at_PSG :"July 29th 2019",
+        Position :"Midfielder",
+        Games_played: 2,
+        Minutes_played: 180,
+        PREVIOUS_CLUBS: [{}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 34, //same as shirt number
+        Name: "Xavi Simons",
+        Birthdate: "April 21st 2003, Amsterdam",
+        Nationality:"Dutch",
+        Profile: "168 cm / 58 kg",
+        Signed_at_PSG :"August 4th 2020",
+        Position :"Midfielder",
+        Games_played: 0,
+        Minutes_played: 0,
+        PREVIOUS_CLUBS: [{}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 35, //same as shirt number
+        Name: "Ismael Gharbi",
+        Birthdate: "",
+        Nationality:"",
+        Profile: "",
+        Signed_at_PSG :"",
+        Position :"Midfielder",
+        Games_played: 1,
+        Minutes_played: 9,
+        PREVIOUS_CLUBS: [{}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 102, //same as shirt number
+        Name: "Edouard Michut",
+        Birthdate: "",
+        Nationality:"",
+        Profile: "",
+        Signed_at_PSG :"",
+        Position :"Midfielder",
+        Games_played: 0,
+        Minutes_played: 0,
+        PREVIOUS_CLUBS: [{}],
+        Website: "",
+        Facebook: ""
+    },
+    {
+        Id: 103, //same as shirt number
         Name: "Leonil Misse",
         Birthdate: "",
         Nationality:"",
         Profile: "",
         Signed_at_PSG :"",
         Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
+        Games_played: -1,
+        Minutes_played: -1,
+        PREVIOUS_CLUBS: [{}],
+        Website: "",
+        Facebook: ""
     },
     {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
-        Position :"Midfielder",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
-    },
-    {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
+        Id: 7, //same as shirt number
+        Name: "Kylian Mbappé",
+        Birthdate: "December 20th 1998, Paris",
+        Nationality:"French",
+        Profile: "178cm / 73kg",
+        Signed_at_PSG :"August 31st 2017",
         Position :"Forward",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
+        Games_played: 4,
+        Minutes_played: 350,
+        PREVIOUS_CLUBS: [{"AS Monaco":"2015-2017"}],
+        Website: "https://kylianmbappe.com/?fbclid=IwAR1mWg470fL8NWnIgJhcXVBI-UzYup90r5dUwyivctYITxYshCjxTlTRqp0",
+        Facebook: "https://www.facebook.com/kylianmbappeofficiel/"
     },
     {
-        Id: 10, //same as shirt number
-        Name: "Leonil Misse",
-        Birthdate: "",
-        Nationality:"",
-        Profile: "",
-        Signed_at_PSG :"",
+        Id: 9, //same as shirt number
+        Name: "Mauro Icardi",
+        Birthdate: "February 19th 1993, Rosario (Argentina)",
+        Nationality:"Argentinan",
+        Profile: "181 cm / 75 kg",
+        Signed_at_PSG :"September 2nd 2019",
         Position :"Forward",
-        Games_played: ,
-        Minutes_played: ,
-        PREVIOUS_CLUBS: [{"FC Barcelona":"2004-2021",}],
-        Website: "https://neymarjr.com",
-        Facebook: "https://www.facebook.com/neymarjr/"
+        Games_played: 3,
+        Minutes_played: 264,
+        PREVIOUS_CLUBS: [{"UC Sampdoria":"2012-2013","Inter Milan":"2013-2019"}],
+        Website: "",
+        Facebook: ""
     },
   ];
