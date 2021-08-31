@@ -471,3 +471,13 @@ const players_list = [
         Facebook: ""
     },
   ];
+
+  function getPlayers(){
+      const playersArr = [];
+      players.forEach(element => {
+          playersArr.push(element["name"]);
+      });
+      return playersArr;
+  }
+
+  module.exports = { getPlayers };
