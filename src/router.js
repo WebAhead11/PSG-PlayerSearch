@@ -14,7 +14,11 @@ function router(request, response) {
   else if(url==="/data")
   {
     getPlayers(request,response);
-  } else {
+  } 
+  else if(url.includes("?playerName=")){
+    
+  }
+  else {
     missingHandler(request, response);
   }
 }
