@@ -23,13 +23,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
   //here will be the display to the user (html) in dev with id "dataPreview"
   if(playerToSearch!=""){
     let PlayerCardHtml = "";
-    /*
-       
-        
-        "": 24,
-        "PREVIOUS_CLUBS": [{"FC Barcelona":"2004-2021"}],
-      
-    */
     if(Array[0]["Id"]>=100){
       PlayerCardHtml += "<div class='shirtNumber'>Not choosen yet</div>"
     }
@@ -39,7 +32,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
   
   PlayerCardHtml += "<div class='playerName'>"+ Array[0]['Name'] +"</div>"
   PlayerCardHtml += "<div class='playerCard'>"
-  //PlayerCardHtml += "<div><img src='./public/IMG/"+Array[0]['Id']+".png'></div>"
   let styleC = "background-image: url(./public/IMG/"+Array[0]['Id']+".png);"
   PlayerCardHtml += "<div style='" + styleC + " background-repeat: no-repeat;'>";
   PlayerCardHtml += "<div>Birthdate: " + Array[0]["Birthdate"] +" </div>";
@@ -62,16 +54,20 @@ document.querySelector("form").addEventListener("submit", (event) => {
     PlayerCardHtml += "<div>Minutes_played: No Data To Preview </div>"
   }
   //previous clubs
-  PlayerCardHtml += "<div>PREVIOUS_CLUBS: " + Array[0]["PREVIOUS_CLUBS"][0] +" </div>"
-  let arr= Array[0]["PREVIOUS_CLUBS"][0];
-  console.log(arr);
-  for(let club in arr){
-      console.log(club,arr[club]);
-      
+  const arr= Array[0]["PREVIOUS_CLUBS"];
+  
+  if(arr.length>0){
+    //const newArr = arr.split(",");
+    PlayerCardHtml += "<div>PREVIOUS_CLUBS:</div>"
+    //for(let x=0;x<newArr.length;x++){
+     // PlayerCardHtml += "<div>" + newArr[x]+" </div>"
+    
+      //}
+     
   }
-  // arr.forEach(element => {
-  //   console.log(element);
-  // });
+  else{
+    PlayerCardHtml += "<div>PREVIOUS_CLUBS: No Data To Preview.</div>"
+  }
   if (Array[0]["Website"]!=""){
     PlayerCardHtml += "<div>Website: <a href='" + Array[0]["Website"] +"' target='_blank'>"+ Array[0]['Name']+"</a></a></div>";
   }
@@ -87,7 +83,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   
   PlayerCardHtml += "</div>"
   PlayerCardHtml += "</div>"
-    console.log(PlayerCardHtml);
+    //console.log(PlayerCardHtml);
   document.getElementById("dataPreview").innerHTML = PlayerCardHtml;
   }
   else{
