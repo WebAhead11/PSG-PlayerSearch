@@ -1,4 +1,3 @@
-body {
-  background-image: url("IMG/team.jpg");
-  background-repeat: no-repeat;
+.playerCard{
+  height: 600px;
 }

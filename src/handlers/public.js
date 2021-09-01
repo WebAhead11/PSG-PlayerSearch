@@ -5,6 +5,7 @@ const types = {
   css: "text/css",
   js: "application/javascript",
   jpg: "image/jpeg",
+  png: "image/jpeg",
 };
 function publicHandler(request, response) {
   const urlArray = request.url.split("."); // e.g. "/style.css" -> ["/style", "css"]
