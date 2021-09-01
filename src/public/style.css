@@ -1,3 +1,71 @@
-.playerCard{
+:root {
+  --fontFamily: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  --titlesColors: #cb1c22;
+  --titlesFont: fantasy;
+  --pcolor: black;
+}
+body {
+}
+.aboveSrch {
+}
+.container {
+  font-family: var(--fontFamily);
+  font-size: 27px;
+  text-align: justify;
+}
+.h1970 {
+  color: var(--titlesColors);
+  font-family: var(--titlesFont);
+}
+.about1970 {
+  color: var(--pcolor);
+  font-family: var(--fontFamily);
+}
+.aboutPSG {
+  color: var(--pcolor);
+  font-family: var(--fontFamily);
+}
+.p1 {
+  color: var(--pcolor);
+  font-family: var(--fontFamily);
+}
+.global {
+  color: var(--titlesColors);
+  font-family: var(--titlesFont);
+}
+.p2 {
+  color: var(--pcolor);
+  font-family: var(--fontFamily);
+}
+
+.shrtNum_plyrName {
+  display: flex;
+  justify-content: left;
+}
+.shirtNumber {
+  font-size: -webkit-xxx-large;
+  color: var(--titlesColors);
+  font-family: var(--titlesFont);
+}
+.playerName {
+  font-size: xxx-large;
+  color: #081f88;
+  font-variant: all-petite-caps;
+}
+.playerCard {
   height: 600px;
+}
+.Img_other {
+  color: black;
+  padding: 112px;
+  margin: 8px;
+  border-style: dashed;
+  border-color: darkred;
+  font-family: var(--fontFamily);
+  font-size: x-large;
+  background-size: 1395px;
+  outline-style: dotted;
+}
+
+.other {
 }
