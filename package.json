@@ -2,10 +2,10 @@
   "name": "auto-complete",
   "version": "1.0.0",
   "description": "Week 4 of WebAhead program ,we to had to build an auto complete project as a serach engine.",
-  "main": "api.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/aziz1980-ctrl/auto-complete/issues"
   },
-  "homepage": "https://github.com/aziz1980-ctrl/auto-complete#readme"
+  "homepage": "https://github.com/aziz1980-ctrl/auto-complete#readme",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
