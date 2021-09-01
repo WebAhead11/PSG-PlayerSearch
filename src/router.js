@@ -15,9 +15,9 @@ function router(request, response) {
   {
     getPlayers(request,response);
   } 
-  else if(url.includes("?playerName=")){
-    
-  }
+  // else if(url.includes("?playerName=")){
+  //   getPlayerCard();
+  // }
   else {
     missingHandler(request, response);
   }

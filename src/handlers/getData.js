@@ -19,31 +19,6 @@ function getPlayers(request,response){
         response.writeHead(200,{"content-type":"application/json"});
         response.end(JSON.stringify(result));
     })
-        
-    
- 
-        // (error, file) => {
-        //     if (error) {
-        //         console.log(error);
-        //       } else {
-        //         const data = JSON.parse(file);
-        //         // console.log(data);
-        //         let playersArr = data.players_list;
-        //         return playersArr;
-        //       }
-        //   }
-
-
-
-
-
-
-
-        // const playersArr = [];
-    // players_list.forEach(element => {
-    //     playersArr.push(element["name"]);
-    // });
-    // return playersArr;
 }
 
 module.exports = getPlayers;
