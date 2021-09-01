@@ -7,9 +7,7 @@ other fiedls that empty string because no data at pares website
 */
 const getPlayersName = require("./getJosn")
 
-
 function getPlayers(request,response){
-
     let body = "" ;
     request.on("data",(chunk)=>{
         body += chunk.toString();
@@ -20,5 +18,4 @@ function getPlayers(request,response){
         response.end(JSON.stringify(result));
     })
 }
-
 module.exports = getPlayers;

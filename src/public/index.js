@@ -1,26 +1,30 @@
-
 fetch("http://localhost:3000/data")
 .then(response => {
-// console.log(response.json());
- return response.json();
-}).then((Array)=>{
-   //console.log("data:" + Array);
-   var options = '';
-   for (var i = 0; i < Array.length; i++) {
-   options += '<option value="' + Array[i] + '" />';
- }
-
- document.getElementById('players').innerHTML = options;
-}).catch((err)=>{
+  return response.json();
+})
+.then((Array)=>{
+  var options = '';
+  for (var i = 0; i < Array.length; i++) {
+    options += '<option value="' + Array[i] + '" />';
+  }
+  document.getElementById('players').innerHTML = options;
+})
+.catch((err)=>{
   console.log(err)
 });
-
-
-
-// let typing = document.getElementById("playerName");
-// typing.addEventListener("submit", (event) => {
-//    //here the connection to server start and we serach for competable matches
-
-//   });
-
-
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const playerToSearch = document.getElementById("playerName").value;
+  fetch(`http://localhost:3000/card?player=${playerToSearch}`)
+  .then(response => {
+    return response.json();
+  })
+  .then((Array)=>{
+  //console.log(Array)
+  //here will be the display to the user (html) in dev with id "dataPreview"
+  
+  })
+  .catch((err)=>{
+  //console.log(err) have to msg on html
+  });
+});
