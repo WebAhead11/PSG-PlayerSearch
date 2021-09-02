@@ -110,7 +110,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
             "<div class='shirtNumber'>" + arr2[0]["Id"] + "</div>";
         }
 
-        console.log(1)
+        console.log(1);
 
         PlayerCardHtml +=
           "<div class='playerName'>" + arr2[0]["Name"] + "</div>";
@@ -156,26 +156,21 @@ document.querySelector("form").addEventListener("submit", (event) => {
             "<div class='other'>Minutes_played : No Data To Preview </div>";
         }
         //previous clubs
-        PlayerCardHtml +=
-          "<div class='other'>PREVIOUS_CLUBS : " +
-          " </div>";
+        PlayerCardHtml += "<div class='other'>PREVIOUS_CLUBS : " + " </div>";
 
-        console.log('AZIZ', arr2[0]["PREVIOUS_CLUBS"][0]['Santos FC'])
+        console.log("AZIZ", arr2[0]["PREVIOUS_CLUBS"][0]["Santos FC"]);
         let arr = arr2[0]["PREVIOUS_CLUBS"];
 
-        PlayerCardHtml +=
-          "<div class='other'>";
-
-        [{ 'santos Fc': '2013' }]
+        PlayerCardHtml += "<div class='other'>";
 
         // Object.keys(obj) ['santos Fc']
 
         arr.forEach((obj) => {
-          const key = Object.keys(obj)[0]
-          PlayerCardHtml += `<span>${key} ${obj[key]} </span>`
+          const key = Object.keys(obj)[0];
+          PlayerCardHtml += `<span>${key} ${obj[key]} </span>`;
         });
 
-        PlayerCardHtml += "</div>"
+        PlayerCardHtml += "</div>";
 
         if (arr2[0]["Website"] != "") {
           PlayerCardHtml +=
