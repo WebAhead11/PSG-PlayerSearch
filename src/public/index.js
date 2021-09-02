@@ -55,14 +55,16 @@ document.querySelector("form").addEventListener("submit", (event) => {
   }
   //previous clubs
   const arr= Array[0]["PREVIOUS_CLUBS"];
-  
+  let arr2 = [];
+  for(let x=0;x<arr.length;x++){
+    //   PlayerCardHtml += "<div>" + newArr[x]+" </div>"
+    arr2.push(arr[x]);
+      }
+      console.log(arr2);
   if(arr.length>0){
     //const newArr = arr.split(",");
     PlayerCardHtml += "<div>PREVIOUS_CLUBS:</div>"
-    //for(let x=0;x<newArr.length;x++){
-     // PlayerCardHtml += "<div>" + newArr[x]+" </div>"
     
-      //}
      
   }
   else{
