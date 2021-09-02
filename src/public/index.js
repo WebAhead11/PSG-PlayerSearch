@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/data")
+fetch("http://localhost:8080/data")
   .then((response) => {
     return response.json();
   })
@@ -93,7 +93,7 @@ fetch("http://localhost:3000/data")
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
   const playerToSearch = document.getElementById("playerName").value;
-  fetch(`http://localhost:3000/card?player=${playerToSearch}`)
+  fetch(`http://localhost:8080/card?player=${playerToSearch}`)
     .then((response) => {
       return response.json();
     })
@@ -154,16 +154,23 @@ document.querySelector("form").addEventListener("submit", (event) => {
         //previous clubs
         PlayerCardHtml +=
           "<div class='other'>PREVIOUS_CLUBS : " +
-          Array[0]["PREVIOUS_CLUBS"][0] +
           " </div>";
-        let arr = Array[0]["PREVIOUS_CLUBS"][0];
-        console.log(arr);
-        for (let club in arr) {
-          console.log(club, arr[club]);
-        }
-        // arr.forEach(element => {
-        //   console.log(element);
-        // });
+          
+          let arr =JSON.stringify(Array[0]["PREVIOUS_CLUBS"]);
+          let arr2 = arr.split(",");
+          
+          for(let d=0;d<arr2.length;d++){
+            arr2[d]= arr2[d].replaceAll('"',"");
+            arr2[d] = arr2[d].replaceAll("[","");
+            arr2[d] = arr2[d].replaceAll("]","");
+            arr2[d] = arr2[d].replaceAll("{","");
+            arr2[d] = arr2[d].replaceAll("}","");
+            arr2[d] = arr2[d].replaceAll(":"," : ");
+            PlayerCardHtml +=
+          "<div class='other'> " +arr2[d]+
+          " </div>";
+          }
+      
         if (Array[0]["Website"] != "") {
           PlayerCardHtml +=
             "<div class='other'>Website : <a href='" +
