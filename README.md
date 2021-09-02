@@ -9,24 +9,24 @@ the user can type any letter and the search engine will complete the name for hi
 Main page (about the club):
 :point_down:
 ---
-![1]()
+![1](PSGmainpage.png)
 ---
 Here it gives you also the full list of the players:
 ---
-![2]()
+![2](plyrsLst.png)
 ---
 here's a sample for a search on the text "hak":
 ---
-![3]()
+![3](hakSrch.png)
 ---
 Player's details:
 :point_down:
 ---
-![4]()
+![4](hakSrch1.png)
 ---
 Here we can see the player's Facebook account link and player's website link (which can be accessed by clicking):
 ---
-![5]()
+![5](MessiSrch.png)
 ---
 ---
 ### Resources:
