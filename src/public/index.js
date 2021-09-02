@@ -3,6 +3,12 @@ fetch("http://localhost:3000/data")
     return response.json();
   })
   .then((Array) => {
+    var options = "";
+    for (var i = 0; i < Array.length; i++) {
+      options += '<option value="' + Array[i] + '" />';
+    }
+    document.getElementById("players").innerHTML = options;
+    // .then((Array)=>{
     //here will be the display to the user (html) in dev with id "dataPreview"
     if (playerToSearch != "") {
       let PlayerCardHtml = "";
