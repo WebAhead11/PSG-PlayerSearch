@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/data")
+fetch("http://localhost:3000/data")
   .then((response) => {
     return response.json();
   })
@@ -93,7 +93,7 @@ fetch("http://localhost:8080/data")
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
   const playerToSearch = document.getElementById("playerName").value;
-  fetch(`http://localhost:8080/card?player=${playerToSearch}`)
+  fetch(`http://localhost:3000/card?player=${playerToSearch}`)
     .then((response) => {
       return response.json();
     })
